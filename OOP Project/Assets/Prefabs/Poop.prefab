@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.192685, y: -13.577, z: 23.779928}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5921675422810616318}
   m_Father: {fileID: 0}
@@ -55,6 +56,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -112,7 +114,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &866422784130265344
 MonoBehaviour:
@@ -196,14 +198,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce28f77df6f94d64eb325d00ab252432, type: 3}
---- !u!1 &6441788765965511492 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ce28f77df6f94d64eb325d00ab252432, type: 3}
-  m_PrefabInstance: {fileID: 6171265271416018453}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5921675422810616318 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ce28f77df6f94d64eb325d00ab252432, type: 3}
+  m_PrefabInstance: {fileID: 6171265271416018453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6441788765965511492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ce28f77df6f94d64eb325d00ab252432, type: 3}
   m_PrefabInstance: {fileID: 6171265271416018453}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &776436881408537725

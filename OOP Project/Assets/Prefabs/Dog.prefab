@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 23.779928}
   m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1154674971167687847}
   m_Father: {fileID: 0}
@@ -55,6 +56,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -112,7 +114,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &8868510854055648401
 MonoBehaviour:
@@ -201,11 +203,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 103890, guid: 2b6e184cdeba888429a079d519a7c8d5, type: 3}
   m_PrefabInstance: {fileID: 1154674971167653391}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1154674971167687847 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 490152, guid: 2b6e184cdeba888429a079d519a7c8d5, type: 3}
-  m_PrefabInstance: {fileID: 1154674971167653391}
-  m_PrefabAsset: {fileID: 0}
 --- !u!65 &2335258415837377267
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -219,3 +216,8 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09653988, y: 0.22714417, z: 0.27255884}
   m_Center: {x: 0.00044250488, y: 0.11444, z: 0.022767901}
+--- !u!4 &1154674971167687847 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 490152, guid: 2b6e184cdeba888429a079d519a7c8d5, type: 3}
+  m_PrefabInstance: {fileID: 1154674971167653391}
+  m_PrefabAsset: {fileID: 0}
