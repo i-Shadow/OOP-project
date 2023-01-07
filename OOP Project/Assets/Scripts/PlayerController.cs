@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
-    public float jumpForce;
+    public float speed = 0.02f;
+    public float jumpForce = 80f;
     public bool gameOver;
-    private bool doubleJump;
     public bool isOnGround;
     private Rigidbody playerRb;
         
@@ -31,7 +30,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
-            doubleJump = false;
         }
 
         if (collision.gameObject.CompareTag("Enemy"))
@@ -53,21 +51,28 @@ public class PlayerController : MonoBehaviour
     {
         // Movement from side to side
         float horizontalInput = Input.GetAxis("Horizontal");
-        playerRb.AddForce(Vector3.right * speed * horizontalInput);
+        
+        if (transform.position.x >= -10 && transform.position.x <= 9 && isOnGround)
+        {
+            transform.Translate(Vector3.right * speed * horizontalInput);
+        } 
+        else
+        {
+            if (transform.position.x < -10) transform.position = new Vector3(-10, transform.position.y, transform.position.z);
+            if (transform.position.x > 9) transform.position = new Vector3(9, transform.position.y, transform.position.z);
+        }
 
-        // Jumping and double-jumping
+        // Jumping
         if (Input.GetKeyDown(KeyCode.UpArrow) && !gameOver)
         {
             if (isOnGround)
             {
                 playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                 isOnGround = false;
-                doubleJump = true;
             }
-            else if (doubleJump && !isOnGround)
+            else if (!isOnGround)
             {
                 playerRb.AddForce(Vector3.up * jumpForce / 2, ForceMode.Impulse);
-                doubleJump = false;
             }
 
         }
