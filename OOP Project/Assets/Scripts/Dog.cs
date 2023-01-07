@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Dog : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void EnemyMove()
     {
-        
-    }
+        speed = 13;
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (transform.position.z < destroyLimit)
+        {
+            Destroy(gameObject);
+        }
     }
 }

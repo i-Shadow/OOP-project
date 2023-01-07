@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1875855952304072948}
   - component: {fileID: 1875855952304072947}
   - component: {fileID: 1875855952304072952}
-  - component: {fileID: 1875855952304072951}
+  - component: {fileID: -6842508740228604562}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Enemy
@@ -116,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &1875855952304072951
+--- !u!114 &-6842508740228604562
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,10 +125,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1875855952304072946}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a33f29458480bbc4fa054962c85c37ca, type: 3}
+  m_Script: {fileID: 11500000, guid: 1fe5fdca40548b548902c0ce858be2be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
 --- !u!1001 &2607395985143085379
 PrefabInstance:
   m_ObjectHideFlags: 0

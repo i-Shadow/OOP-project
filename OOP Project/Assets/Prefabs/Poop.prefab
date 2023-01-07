@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 866422784130265357}
   - component: {fileID: 866422784130265356}
   - component: {fileID: 866422784130265345}
-  - component: {fileID: 866422784130265344}
+  - component: {fileID: -8195494927199433394}
   m_Layer: 0
   m_Name: Poop
   m_TagString: Consumable
@@ -116,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &866422784130265344
+--- !u!114 &-8195494927199433394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,10 +125,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 866422784130265359}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a33f29458480bbc4fa054962c85c37ca, type: 3}
+  m_Script: {fileID: 11500000, guid: b7ae47e00e49828439a6b4ad09a3d7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
 --- !u!1001 &6171265271416018453
 PrefabInstance:
   m_ObjectHideFlags: 0
