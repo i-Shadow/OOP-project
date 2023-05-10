@@ -9,7 +9,9 @@ public class Obstacle : Enemy
         speed = 10;
         transform.Translate(Vector3.right * Time.deltaTime * speed);
 
-        if (transform.position.z < destroyLimit)
+        
+
+        if ((transform.position.z < destroyLimit) | GameManager.Instance.gameOver)
         {
             Destroy(gameObject);
         }

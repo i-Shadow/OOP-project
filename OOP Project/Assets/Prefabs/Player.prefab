@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.212, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2487388381380219307}
   m_Father: {fileID: 0}
@@ -55,6 +56,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -92,7 +94,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2726096401140097407}
-  m_Material: {fileID: 13400000, guid: be3b2a9cc06f04e428b3cd09c538e061, type: 2}
+  m_Material: {fileID: 13400000, guid: b8c0783397d3fbf429181ebe319ba6fd, type: 2}
   m_IsTrigger: 0
   m_Enabled: 0
   serializedVersion: 2
@@ -130,6 +132,21 @@ MonoBehaviour:
   jumpForce: 60
   gameOver: 0
   isOnGround: 0
+  lives: 6
+  maxLives: 6
+  minLives: 0
+  score: 0
+  scoreText: {fileID: 0}
+  gameOverText: {fileID: 0}
+  heart1Full: {fileID: 0}
+  heart2Full: {fileID: 0}
+  heart3Full: {fileID: 0}
+  heart1Half: {fileID: 0}
+  heart2Half: {fileID: 0}
+  heart3Half: {fileID: 0}
+  heart1Hollow: {fileID: 0}
+  heart2Hollow: {fileID: 0}
+  heart3Hollow: {fileID: 0}
 --- !u!1001 &2487388381380452207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139,7 +156,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 180406, guid: 3b3cb28f974c42c4481d72da460937c9, type: 3}
       propertyPath: m_Name
-      value: Dog_GermanShepherd_01
+      value: herd_01manShepherd_01
       objectReference: {fileID: 0}
     - target: {fileID: 495300, guid: 3b3cb28f974c42c4481d72da460937c9, type: 3}
       propertyPath: m_RootOrder
@@ -163,7 +180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 495300, guid: 3b3cb28f974c42c4481d72da460937c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.451
+      value: -0.98
       objectReference: {fileID: 0}
     - target: {fileID: 495300, guid: 3b3cb28f974c42c4481d72da460937c9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -199,14 +216,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b3cb28f974c42c4481d72da460937c9, type: 3}
---- !u!1 &2487388381380567001 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 180406, guid: 3b3cb28f974c42c4481d72da460937c9, type: 3}
-  m_PrefabInstance: {fileID: 2487388381380452207}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2487388381380219307 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 495300, guid: 3b3cb28f974c42c4481d72da460937c9, type: 3}
+  m_PrefabInstance: {fileID: 2487388381380452207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2487388381380567001 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 180406, guid: 3b3cb28f974c42c4481d72da460937c9, type: 3}
   m_PrefabInstance: {fileID: 2487388381380452207}
   m_PrefabAsset: {fileID: 0}
 --- !u!65 &5533159753677475486

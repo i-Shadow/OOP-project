@@ -8,7 +8,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] consumables;
 
     private float zSpawn = 45f;
-    private float ySpawn = 0.45f;
+    private float ySpawn = -0.2f;
     private float minXspawn = -9.3f;
     private float maxXspawn = 9f;
 
@@ -19,14 +19,12 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", spawnEnemyDelay, spawnEnemyRate);
-        InvokeRepeating("SpawnConsumable", spawnConsumableDelay, spawnConsumableRate);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (!GameManager.Instance.gameOver)
+        {
+            InvokeRepeating("SpawnEnemy", spawnEnemyDelay, spawnEnemyRate);
+            InvokeRepeating("SpawnConsumable", spawnConsumableDelay, spawnConsumableRate);
+        }
+           
     }
 
     private void SpawnEnemy()

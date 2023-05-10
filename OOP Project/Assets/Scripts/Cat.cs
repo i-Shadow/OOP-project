@@ -5,14 +5,25 @@ using UnityEngine;
 public class Cat : Enemy
 {
     public GameObject player;
-    public override void EnemyMove()
+    Vector3 playerDirection;
+    [SerializeField] int catSpeed = 100;
+        public override void EnemyMove()
     {
         player = GameObject.Find("Player");       
-        speed = 15;
-        Vector3 playerDirection = (transform.position - player.transform.position).normalized;
-        transform.Translate(playerDirection * Time.deltaTime * speed);
-        transform.Rotate(0, playerDirection.x, 0);
-        if (transform.position.z < destroyLimit)
+        
+        
+        if (transform.position.z < -30)
+        {
+            playerDirection = new Vector3(0, transform.position.y, transform.position.z).normalized;
+        } else playerDirection = (player.transform.position - transform.position).normalized;
+     
+        Quaternion tempLookRotation = Quaternion.LookRotation(new Vector3(playerDirection.x, 0.0f, playerDirection.z));
+        
+        transform.rotation = Quaternion.Lerp(gameObject.transform.rotation, tempLookRotation, Time.deltaTime * speedRotation);
+        
+        objectRb.AddForce(playerDirection * catSpeed);
+
+        if ((transform.position.z < destroyLimit) | GameManager.Instance.gameOver)
         {
             Destroy(gameObject);
         }

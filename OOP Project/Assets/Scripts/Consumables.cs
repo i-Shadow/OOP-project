@@ -9,7 +9,9 @@ public class Consumables : Enemy
         speed = 10;
         transform.Translate(Vector3.back * Time.deltaTime * speed);
 
-        if (transform.position.z < destroyLimit)
+        
+
+        if ((transform.position.z < destroyLimit) | GameManager.Instance.gameOver)
         {
             Destroy(gameObject);
         }

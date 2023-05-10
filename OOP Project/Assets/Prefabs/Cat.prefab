@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1875855952304072950}
   - component: {fileID: 1875855952304072949}
-  - component: {fileID: 1875855952304072948}
   - component: {fileID: 1875855952304072947}
   - component: {fileID: 1875855952304072952}
   - component: {fileID: -6842508740228604562}
@@ -29,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875855952304072946}
   m_LocalRotation: {x: -0, y: -0.9997951, z: -0, w: -0.020245304}
-  m_LocalPosition: {x: 0.19834067, y: -14.247, z: 23.500895}
+  m_LocalPosition: {x: 0.19834067, y: 1.59, z: 23.500895}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45,48 +44,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875855952304072946}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1875855952304072948
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1875855952304072946}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 873400cb84ac2884d8f1f46e515a050e, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &1875855952304072947
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -94,12 +51,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875855952304072946}
-  m_Material: {fileID: 13400000, guid: be3b2a9cc06f04e428b3cd09c538e061, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 0
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.81203115, y: 0.93470466, z: 1.5250585}
+  m_Center: {x: 0.021138191, y: 0.3153525, z: 0.2625298}
 --- !u!54 &1875855952304072952
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -114,7 +71,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &-6842508740228604562
 MonoBehaviour:
@@ -128,6 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fe5fdca40548b548902c0ce858be2be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  catSpeed: 200
 --- !u!1001 &2607395985143085379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -165,7 +124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9b574434f73c46a4eb333235dd556599, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.604
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 9b574434f73c46a4eb333235dd556599, type: 3}
       propertyPath: m_LocalPosition.z
@@ -221,8 +180,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.13022614, y: 0.20207727, z: 0.3252585}
-  m_Center: {x: -0.00064073503, y: 0.090369046, z: -0.017447114}
+  m_Size: {x: 0.13022614, y: 0.16679284, z: 0.25310013}
+  m_Center: {x: -0.00064073503, y: 0.10801126, z: -0.019657804}
 --- !u!4 &7013758405473079897 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 9b574434f73c46a4eb333235dd556599, type: 3}
