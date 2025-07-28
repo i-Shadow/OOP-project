@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public int maxLives = 6;
     public int minLives = 0;
     public float score = 0;
+    public MenuManager menuManager;
     // Start is called before the first frame update
     public void Awake()
     {
@@ -47,10 +48,10 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        gameOverText.gameObject.SetActive(true);
         gameOver = true;
         animator = GameObject.Find("Player").GetComponentInChildren<Animator>();
         animator.SetTrigger("Sit_b");
+        menuManager.SetScore();
 
     }
 
